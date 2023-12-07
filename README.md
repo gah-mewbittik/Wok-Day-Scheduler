@@ -16,7 +16,7 @@ N/A
 
 ## Usage
 
-To take the quiz, simply click the following link: https://gah-mewbittik.github.io/Work-Day-Schduler/
+To take the quiz, simply click the following link: https://gah-mewbittik.github.io/Wok-Day-Scheduler/
 From there you will be able view the work day scheduler and simply click the space next to the displayed time period. Then enter the details you would like to save for that particular time period.  
 
 ## Credits
