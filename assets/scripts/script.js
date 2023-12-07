@@ -55,7 +55,7 @@ $(function () {
       scheduleBlk_El.setAttribute('id', 'hour-' + (i + 9));
       scheduleBlk_El.classList.add('row', 'time-block');
 
-      //adding past, present, and future classes
+      //adding past, present, and future classes for colors
       if(i + 9 < dayjs().hour()){
         scheduleBlk_El.classList.add('past');
       }else if(i + 9 === dayjs().hour()){
@@ -90,10 +90,6 @@ $(function () {
       scheduleBlk_El.appendChild(time_El);
       scheduleBlk_El.appendChild(txtArea_El);
       scheduleBlk_El.appendChild(saveButton_El);
-
-      //calling highlightedTimeSlot
-      var highlightedClass = highlightedTimeSlot(i);
-      scheduleBlk_El.classList.add(highlightedClass);
 
       document.querySelector('.container-lg').appendChild(scheduleBlk_El);
 
@@ -142,20 +138,6 @@ $(function () {
         var textarea = document.querySelector('#' + timeBlockId + ' .description');
         textarea.value = savedData;
       }
-    }
-
-  }
-
-  function highlightedTimeSlot(index){
-    var currentTime = dayjs().format('H:mm A');
-    var time = dayjs(scheduleTime[index].time, 'H A');
-   
-    if(dayjs(currentTime, 'H:mm A').isBefore(time)){
-      return 'future';
-    }else if(dayjs(currentTime, 'H:mm A').isAfter(time)){
-      return 'past';
-    }else{
-      return 'present';
     }
 
   }
